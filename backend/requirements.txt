@@ -1,0 +1,9 @@
+fastapi==0.115.12
+prometheus_client==0.22.0
+pydantic==2.11.5
+python-dotenv==1.1.0
+sentry_sdk==2.29.1
+uvicorn[standard]
+flake8
+pytest
+httpx

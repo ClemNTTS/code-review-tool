@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: ./backend
+    container_name: code-review-tool-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - SENTRY_DSN=${SENTRY_DSN}
+      - SENTRY_ENV=${SENTRY_ENV}
+    env_file:
+      - .env
+    restart: unless-stopped
+    # volumes:
+    #   - ./backend:/app  # Uncomment for live code reload in dev

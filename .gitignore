@@ -1,0 +1,48 @@
+# Python
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.pycache
+
+# Logs
+*.log
+logs/
+
+# Environments
+.env
+.env.*
+
+# Node
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# VSCode
+.vscode/
+
+# Test/coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Docker
+*.pid
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Misc
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Ignore backend/test/__pycache__
+backend/tests/__pycache__/
+
+# Ignore backend/app/__pycache__
+backend/app/__pycache__/
