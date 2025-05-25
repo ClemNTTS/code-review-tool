@@ -12,6 +12,7 @@ from fastapi import Response
 from dotenv import load_dotenv
 
 
+
 class LintRequest(BaseModel):
     language: str
     code: str
@@ -80,3 +81,11 @@ def run_linter(req: LintRequest):
         sentry_sdk.capture_exception()
         report = {"error": result.stderr}
     return report
+
+@app.get("/politique-de-confidentialite", response_class=Response)
+def politique_confidentialite():
+    file_path = os.path.join(os.path.dirname(__file__), "./static/politique.html")
+    with open(file_path, "r", encoding="utf-8") as f:
+        contenu = f.read()
+    return Response(content=contenu, media_type="text/html")
+
