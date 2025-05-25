@@ -74,6 +74,18 @@ curl -X POST "http://127.0.0.1:8000/functions/run_linter" \
   -d '{"language": "javascript", "code": "var unused; function add(a,b){return a+b;}"}'
 ```
 
+### Endpoint: `/politique-de-confidentialite`
+
+- **Method**: GET
+- **Description**: Returns the privacy policy as HTML.
+- **Response**: `text/html` containing the privacy policy.
+
+#### Example with curl
+
+```bash
+curl http://127.0.0.1:8000/politique-de-confidentialite
+```
+
 ## Monitoring & Logging
 
 - **Logs**: All API requests and linting results are logged to `backend/logs/app.log` with automatic rotation.
